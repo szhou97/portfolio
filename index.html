@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shawn Zhou Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d0c68488e4.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" id="navbar__logo">SZ</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="#home" class="navbar__links" id="home-page">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#projects" class="navbar__links" id="projects-page">Projects</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#about" class="navbar__links" id="about-page">About</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="#contact" class="button" id="contact-page">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Main Section -->
+    <div class="main" id="home">
+        <div class="main__container">
+            <h1 class="heading">Shuaike Shawn Zhou</h1>
+            <h2 class="occupation">Software Developer</h2>
+            <p class="description" id="bio"></p>
+            <button class="main__btn"><a href="./resource/fast_track_resume_shawn_zhou.pdf" download >DOWNLOAD RESUME</a></button>
+            
+        </div>
+    </div>
+    <!-- Projects Section -->
+    <div class="main" id="projects">
+        <h1 class="projects__heading">Projects</h1>
+        <div class="projects__container">
+            <div class="projects__group" id="project__one">
+                <h2 class="project__title"> <i class="fa-brands fa-github"></i> Twitter Project</h2>
+                <p class="project__summary">RESTful API Service</p>
+                <a href="https://github.com/szhou97/Twitter-Clone-API" class="projects__link"> project repository</a>
+                
+                <ul class="project__description">
+                    <li>
+                        Created a social media RESTful API service that resembles Twitter and can be served as the backend of a larger program.
+                    </li>
+                    <li>
+                        Ensured project completeness by developing dozens of endpoints for the API service.
+                    </li>
+                    <li>
+                        Maintained project correctness by consistent testing with Postman.
+                    </li>
+                    <li>
+                        Achieved smooth project development by using Slack for frequent communication and Git for proper version control.
+                    </li>
+                    <li>
+                        Utilized Java, Spring, PostgreSQL, PGAdmin and Postman to develop the project.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="projects__group" id="project__two">
+                <h2 class="project__title"> <i class="fa-brands fa-github"></i> Restaurant Clustering By Reviews</h2>
+                <p class="projects__summary"> Machine Learning/Clustering</p>
+                <a href="https://github.com/szhou97/BU-CS565-Yelp-Review-Clustering" class="projects__link"> project repository</a>
+                
+                <ul class="project__description">
+                    <li>
+                        Built a model to classify restaurants based on user-reviews and used the model to provide recommandation queue. 
+                    </li>
+                    <li>
+                        Analyzed Open Yelp Dataset and employed TFIDF vectorizer to prepare text-based reviews for clustering and K-Means clustering model to predict future star-based reviews for restaurants.
+                    </li>
+                    <li>
+                        Utilized Python, Scikit-Learn library, JSON file conversion, and CSV file output, and created plot visualization.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About Section -->
+    <div class="main" id="about">
+        <h1 class="about__heading">About Me</h1>
+        <div class="about__container">
+            <div class="about__text">
+                <p class="about__paragraph">
+                    I spent my early childhood in Shanghai, China before my family moved to the United States in 2013 where I started attending high school. During the time I was involved in the Math team, played trombone in multiple bands, and trained hurdles on the varsity track team. 
+                    <br><br>I attended University of Wisconsin – Madison for my undergraduate degree. At first, my curiosity of how the universe works helped me decide to be a physics and astronomy double major, and during my major courses I had the chance to use Python and MATLAB for writing research papers. That was when I developed a passion for Computer Science and decided to add one more major to my curriculum.
+                    <br><br>After graduating, I decided to attend Boston University to obtain a master’s degree in computer science to focus and solidify my knowledge and skills in Computer Science. Apart from core courses, my studies had a focus on Computer Systems and Machine Learning.
+                    <br><br>I had the opportunity to work as a back-end software engineer after graduating where I worked with deploying projects written in Python onto GCP connective warehouse.
+                    <br><br>Fast forward to today, I am part of the Fasttrack program at Cook Systems working to become a full-stack developer.
+                    <br><br>When I am not writing codes, I have many hobbies to spend my spare time. Being an active person, I involve in many sports including basketball, snowboarding and bodybuilding. I also find time to play instruments including piano, trombone and guitar and occasionally edit music on FL Studio for my local community event.
+                </p>
+            </div>
+            
+            <div class="about__images">
+                <img id="profile_picture">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="main" id="contact">
+        <h1 class="contact__heading">Contact</h1>
+        <div class="contact__container">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <div class="row">
+                    <div class="input-group">
+                        <input type="text" id="name" required>
+                        <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="email" required>
+                        <label for="email"><i class="fa-solid fa-envelope"></i> Your Email</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <textarea name="" id="message" rows="8" required></textarea>
+                    <label for="message"><i class="fa-solid fa-paper-plane"></i> Your Message</label>
+                </div>
+                <button type="submit" class="submit-button">Submit Form</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="social__media">
+            <a href="https://instagram.com/shawnzhou15" class="social__icons"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/shawn.zhou.963" class="social__icons"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/shawn-shuaike-zhou/" class="social__icons"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/szhou97" class="social__icons"><i class="fa-brands fa-github"></i></a>
+        
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    <!-- <script>
+        Implement sendEmail() HERE;
+    </script> -->
+</body>
+</html>
